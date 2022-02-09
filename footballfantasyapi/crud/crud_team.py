@@ -33,7 +33,7 @@ class CRUDTeam(CRUDBase[Team, TeamCreate, TeamUpdate]):
 
     def calculate_team_value(self, db: Session, team_id: int) -> Team:
         players: Sequence[Player] = player.get_players_by_team_id(db=db, team_id=team_id)
-        value: int = sum([p.market_value for p in players])
+        value: int = sum([p.market_value for p in players]) if players else 0
         this_team: Team = self.get(db=db, id=team_id)
         updated_team: TeamUpdatePrivate = TeamUpdatePrivate(value=value)
         return self.update(db=db, db_obj=this_team, obj_in=updated_team)
