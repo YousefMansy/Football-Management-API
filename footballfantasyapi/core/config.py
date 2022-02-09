@@ -21,8 +21,10 @@ class Settings(BaseSettings):
             return v
         raise ValueError(v)
 
-    SQLALCHEMY_DATABASE_URI: Optional[str] = "sqlite:///example2.db"
-    FIRST_SUPERUSER: EmailStr = "admin@recipeapi.com"
+    SQLALCHEMY_DATABASE_URI: Optional[str] = "sqlite:///sqlite.db"
+    FIRST_SUPERUSER: EmailStr = "admin@fantasyfootballapi.com"
+    FIRST_SUPERUSER_PW: str = "123456"
+
     INITIAL_PLAYER_VALUE: int = 1000000
     INITIAL_TEAM_FUNDS: int = 5000000
     INITIAL_TEAM_STRUCTURE: dict = {
