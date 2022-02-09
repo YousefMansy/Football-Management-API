@@ -13,7 +13,7 @@ router = APIRouter()
 # def create_team(
 #         *,
 #         team_in: TeamCreate,
-#         db: Session = Depends(deps.get_db)) -> dict:
+#         current_user: User = Depends(deps.get_current_user)) -> dict:
 #     """
 #     Create a new Team
 #     """
@@ -25,7 +25,8 @@ router = APIRouter()
 def fetch_team(
         *,
         team_id: int,
-        db: Session = Depends(deps.get_db)) -> dict:
+        db: Session = Depends(deps.get_db),
+        current_user: User = Depends(deps.get_current_user)) -> dict:
     """
     Fetch a single team by ID
     """

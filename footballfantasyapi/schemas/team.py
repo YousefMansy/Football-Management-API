@@ -1,10 +1,9 @@
+from typing import Optional
 from pydantic import BaseModel, validator
-from typing import Sequence, Optional
 
 
 class TeamBase(BaseModel):
-    name: str
-    country: str
+    ...
 
 
 class TeamCreate(TeamBase):
@@ -32,6 +31,11 @@ class TeamUpdate(TeamBase):
         return value
 
 
+class TeamUpdatePrivate(TeamBase):
+    funds: Optional[int]
+    value: Optional[int]
+
+
 class TeamInDBBase(TeamBase):
     id: int
     user_id: int
@@ -42,8 +46,12 @@ class TeamInDBBase(TeamBase):
 
 # Properties to return to client
 class Team(TeamInDBBase):
+    id: int
+    name: str
+    country: str
     value: int
     funds: int
+    user_id: int
     pass
 
 

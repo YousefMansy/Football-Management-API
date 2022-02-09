@@ -17,7 +17,7 @@ class PlayerCreate(PlayerBase):
 
 
 class PlayerUpdate(PlayerBase):
-    first_name: Optional[str] = Field(str)
+    first_name: Optional[str]
     last_name: Optional[str]
     country: Optional[str]
     asking_price: Optional[int]
@@ -51,9 +51,11 @@ class PlayerTransfer(PlayerBase):
     asking_price: int
 
 
-class PlayerTransferPrivate(PlayerBase):
-    asking_price: int
-    on_transfer_list: bool
+class PlayerUpdatePrivate(PlayerBase):
+    market_value: Optional[int]
+    asking_price: Optional[int]
+    on_transfer_list: Optional[bool]
+    team_id: Optional[int]
 
 
 class PlayerUpdateRestricted(PlayerBase):
