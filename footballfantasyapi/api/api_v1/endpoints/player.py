@@ -4,7 +4,7 @@ from fastapi import APIRouter, Depends, HTTPException
 
 from footballfantasyapi import crud
 from footballfantasyapi.api import deps
-from footballfantasyapi.schemas import Player, PlayerUpdate, User, PlayerTransfer
+from footballfantasyapi.schemas import Player, PlayerUpdate, User, PlayerTransfer, Profile
 
 router = APIRouter()
 
@@ -58,7 +58,7 @@ def set_player_on_transfer_list(
     return updated_player
 
 
-@router.post("/player/{player_id}/purchase", status_code=200, response_model=Player)
+@router.post("/player/{player_id}/purchase", status_code=200, response_model=Profile)
 def purchase_player(
         *,
         player_id: int,
@@ -108,7 +108,7 @@ def purchase_player(
     crud.team.calculate_team_value(db=db, team_id=buying_team.id)
     crud.team.calculate_team_value(db=db, team_id=selling_team.id)
 
-    return updated_player
+    return crud.user.get_profile(db=db, user_id=current_user.id)
 
 
 @router.put("/{player_id}", status_code=201, response_model=Player)

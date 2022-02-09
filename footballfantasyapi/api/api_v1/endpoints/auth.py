@@ -1,5 +1,3 @@
-import names
-import random
 from typing import Any, Sequence, List
 from sqlalchemy.orm.session import Session
 from fastapi import APIRouter, Depends, HTTPException
@@ -9,7 +7,6 @@ from footballfantasyapi import crud
 from footballfantasyapi import schemas
 from footballfantasyapi.api import deps
 from footballfantasyapi.models.user import User
-from footballfantasyapi.core.config import settings
 from footballfantasyapi.core.auth import authenticate, create_access_token
 from footballfantasyapi.clients.base_team_generator import BaseTeamGeneratorClient
 
