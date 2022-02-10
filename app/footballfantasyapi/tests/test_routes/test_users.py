@@ -1,6 +1,6 @@
 import json
 from jose import jwt
-from app.footballfantasyapi.core.config import settings
+from footballfantasyapi.core.config import settings
 
 
 def test_create_user(client, user_data):

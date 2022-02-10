@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from app.footballfantasyapi.api.api_v1.endpoints import team, player, auth, transfer_list
+from footballfantasyapi.api.api_v1.endpoints import team, player, auth, transfer_list
 
 api_router = APIRouter()
 api_router.include_router(team.router, prefix="/teams", tags=["Teams"])

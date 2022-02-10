@@ -21,7 +21,7 @@ class Settings(BaseSettings):
             return v
         raise ValueError(v)
 
-    SQLALCHEMY_DATABASE_URI: Optional[str] = "postgresql://"
+    SQLALCHEMY_DATABASE_URI: Optional[str] = "postgresql://postgres:1@localhost:5432/app"
     FIRST_SUPERUSER: EmailStr = "admin@fantasyfootballapi.com"
     FIRST_SUPERUSER_PW: str = "123456"
 

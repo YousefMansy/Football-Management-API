@@ -3,12 +3,12 @@ from sqlalchemy.orm.session import Session
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.security import OAuth2PasswordRequestForm
 
-from app.footballfantasyapi import crud
-from app.footballfantasyapi import schemas
-from app.footballfantasyapi.api import deps
-from app.footballfantasyapi.models.user import User
-from app.footballfantasyapi.core.auth import authenticate, create_access_token
-from app.footballfantasyapi.clients.base_team_generator import BaseTeamGeneratorClient
+from footballfantasyapi import crud
+from footballfantasyapi import schemas
+from footballfantasyapi.api import deps
+from footballfantasyapi.models.user import User
+from footballfantasyapi.core.auth import authenticate, create_access_token
+from footballfantasyapi.clients.base_team_generator import BaseTeamGeneratorClient
 
 router = APIRouter()
 

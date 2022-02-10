@@ -1,9 +1,9 @@
 from sqlalchemy.orm import Session
 from typing import Sequence, Optional, Union
 
-from app.footballfantasyapi.models.player import Player
-from app.footballfantasyapi.crud.base import CRUDBase
-from app.footballfantasyapi.schemas.player import PlayerCreate, PlayerUpdate, PlayerTransfer, PlayerUpdatePrivate
+from footballfantasyapi.models.player import Player
+from footballfantasyapi.crud.base import CRUDBase
+from footballfantasyapi.schemas.player import PlayerCreate, PlayerUpdate, PlayerTransfer, PlayerUpdatePrivate
 
 
 class CRUDPlayer(CRUDBase[Player, PlayerCreate, PlayerUpdate]):

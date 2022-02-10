@@ -7,10 +7,10 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from fastapi.testclient import TestClient
 
-from app.footballfantasyapi.db.base import Base
-from app.footballfantasyapi.api.deps import get_db
-from app.footballfantasyapi.api.api_v1.api import api_router
-from app.footballfantasyapi.core.auth import authenticate, create_access_token
+from footballfantasyapi.db.base import Base
+from footballfantasyapi.api.deps import get_db
+from footballfantasyapi.api.api_v1.api import api_router
+from footballfantasyapi.core.auth import authenticate, create_access_token
 
 
 def start_application():

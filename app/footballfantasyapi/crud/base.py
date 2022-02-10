@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from fastapi.encoders import jsonable_encoder
 from typing import Any, Dict, Generic, List, Optional, Type, TypeVar, Union
 
-from app.footballfantasyapi.db.base_class import Base
+from footballfantasyapi.db.base_class import Base
 
 ModelType = TypeVar("ModelType", bound=Base)
 CreateSchemaType = TypeVar("CreateSchemaType", bound=BaseModel)

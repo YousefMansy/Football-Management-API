@@ -1,9 +1,9 @@
 from sqlalchemy.orm import Session
 from fastapi import APIRouter, Depends, HTTPException
 
-from app.footballfantasyapi import crud
-from app.footballfantasyapi.api import deps
-from app.footballfantasyapi.schemas import Team, TeamUpdate, User
+from footballfantasyapi import crud
+from footballfantasyapi.api import deps
+from footballfantasyapi.schemas import Team, TeamUpdate, User
 
 router = APIRouter()
 

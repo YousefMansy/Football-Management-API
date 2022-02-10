@@ -1,8 +1,8 @@
 from typing import Sequence
 
-from app.footballfantasyapi import schemas
-from app.footballfantasyapi.clients import utils
-from app.footballfantasyapi.core.config import settings
+from footballfantasyapi import schemas
+from footballfantasyapi.clients import utils
+from footballfantasyapi.core.config import settings
 
 
 class BaseTeamGeneratorClient:

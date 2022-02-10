@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from app.footballfantasyapi.core.config import settings
+from footballfantasyapi.core.config import settings
 
 connection_uri = settings.SQLALCHEMY_DATABASE_URI
 if connection_uri.startswith("postgres://"):

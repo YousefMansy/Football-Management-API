@@ -40,7 +40,7 @@ The requirements for the test project are:
 3. Run the DB migrations via poetry `poetry run ./prestart.sh` (only required once)
 4. Run the FastAPI server via poetry `poetry run ./run_local.sh`
 5. Create a postgres Database to use
-6. Create a `/footballfantasyapi/core/.env` file and add your db connection string there as `SQLALCHEMY_DATABASE_URI`
+6. Add your db connection string as `SQLALCHEMY_DATABASE_URI` in `core/config.py`
 7. Open http://localhost:8001/docs for the API Swagger documentation
 
 ###  Running using Docker

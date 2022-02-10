@@ -2,11 +2,11 @@ import logging
 from typing import Sequence, List
 from sqlalchemy.orm import Session
 
-from app.footballfantasyapi.api import deps
-from app.footballfantasyapi.db import base  # noqa: F401
-from app.footballfantasyapi import crud, schemas
-from app.footballfantasyapi.core.config import settings
-from app.footballfantasyapi.clients.base_team_generator import BaseTeamGeneratorClient
+from footballfantasyapi.api import deps
+from footballfantasyapi.db import base  # noqa: F401
+from footballfantasyapi import crud, schemas
+from footballfantasyapi.core.config import settings
+from footballfantasyapi.clients.base_team_generator import BaseTeamGeneratorClient
 
 logger = logging.getLogger(__name__)
 

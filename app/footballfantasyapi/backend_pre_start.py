@@ -1,7 +1,7 @@
 import logging
 from tenacity import after_log, before_log, retry, stop_after_attempt, wait_fixed
 
-from app.footballfantasyapi.db.session import SessionLocal
+from footballfantasyapi.db.session import SessionLocal
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

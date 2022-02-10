@@ -4,11 +4,11 @@ from typing import Generator, Optional
 from sqlalchemy.orm.session import Session
 from fastapi import Depends, HTTPException, status
 
-from app.footballfantasyapi.models.user import User
-from app.footballfantasyapi.core.config import settings
-from app.footballfantasyapi.core.auth import oauth2_scheme
-from app.footballfantasyapi.db.session import SessionLocal
-from app.footballfantasyapi.clients.base_team_generator import BaseTeamGeneratorClient
+from footballfantasyapi.models.user import User
+from footballfantasyapi.core.config import settings
+from footballfantasyapi.core.auth import oauth2_scheme
+from footballfantasyapi.db.session import SessionLocal
+from footballfantasyapi.clients.base_team_generator import BaseTeamGeneratorClient
 
 
 class TokenData(BaseModel):
