@@ -33,7 +33,7 @@ RUN bash -c "if [ $INSTALL_DEV == 'true' ] ; then poetry install --no-root ; els
 COPY ./app /app
 RUN chmod +x run.sh
 
-ENV PYTHONPATH=/app
+ENV PYTHONPATH=/
 
 # chown all the files to the app user
 RUN chown -R app:app $HOME
