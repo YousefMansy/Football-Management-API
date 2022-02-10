@@ -1,17 +1,8 @@
 from sqlalchemy.orm import relationship
 from sqlalchemy import Column, Integer, String, ForeignKey, Boolean
 
-from footballfantasyapi.db.base_class import Base
+from app.footballfantasyapi.db.base_class import Base
 
-
-# class PlayerBase(BaseModel):
-#     first_name: str
-#     last_name: str
-#     country: str
-#     age: int
-#     position: str
-#     market_value: int
-#
 
 class Player(Base):
     id = Column(Integer, primary_key=True, index=True)
@@ -23,5 +14,5 @@ class Player(Base):
     age = Column(Integer, nullable=False)
     on_transfer_list = Column(Boolean, default=False)
     asking_price = Column(Integer, nullable=True)
-    team_id = Column(String(10), ForeignKey("team.id"), nullable=False)
+    team_id = Column(Integer, ForeignKey("team.id"), nullable=False)
     team = relationship("Team", back_populates="players")
