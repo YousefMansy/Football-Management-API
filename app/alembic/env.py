@@ -18,8 +18,8 @@ fileConfig(config.config_file_name)
 # target_metadata = mymodel.Base.metadata
 # target_metadata = None
 
-from footballfantasyapi.db.base import Base  # noqa
-from footballfantasyapi.core.config import settings
+from app.footballfantasyapi.db.base import Base  # noqa
+from app.footballfantasyapi.core.config import settings
 
 target_metadata = Base.metadata
 

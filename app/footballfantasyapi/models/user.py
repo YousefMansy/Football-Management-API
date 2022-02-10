@@ -1,7 +1,7 @@
 from sqlalchemy.orm import relationship
 from sqlalchemy import Column, Integer, String
 
-from footballfantasyapi.db.base_class import Base
+from app.footballfantasyapi.db.base_class import Base
 
 
 class User(Base):

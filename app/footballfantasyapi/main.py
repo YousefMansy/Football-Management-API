@@ -1,8 +1,8 @@
 import time
 from fastapi import FastAPI, APIRouter, Request
 
-from footballfantasyapi.core.config import settings
-from footballfantasyapi.api.api_v1.api import api_router
+from app.footballfantasyapi.core.config import settings
+from app.footballfantasyapi.api.api_v1.api import api_router
 
 root_router = APIRouter()
 app = FastAPI(title="Fantasy Football API")

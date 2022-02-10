@@ -1,8 +1,8 @@
 import logging
 
-from footballfantasyapi.db.base import Base
-from footballfantasyapi.db.init_db import init_db
-from footballfantasyapi.db.session import SessionLocal
+from app.footballfantasyapi.db.base import Base
+from app.footballfantasyapi.db.init_db import init_db
+from app.footballfantasyapi.db.session import SessionLocal
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

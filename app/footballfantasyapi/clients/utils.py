@@ -3,7 +3,7 @@ import random
 import pycountry
 import randomname
 
-from footballfantasyapi.core.config import settings
+from app.footballfantasyapi.core.config import settings
 
 
 def generate_team_name() -> str:

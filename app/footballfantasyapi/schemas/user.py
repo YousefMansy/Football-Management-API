@@ -1,7 +1,7 @@
 from typing import Optional, Sequence
 from pydantic import BaseModel, EmailStr
 
-from footballfantasyapi.schemas import Team, Player
+from app.footballfantasyapi.schemas import Team, Player
 
 
 class UserBase(BaseModel):

@@ -4,9 +4,9 @@ from sqlalchemy.orm.session import Session
 from fastapi.security import OAuth2PasswordBearer
 from typing import Optional, MutableMapping, List, Union
 
-from footballfantasyapi.models.user import User
-from footballfantasyapi.core.config import settings
-from footballfantasyapi.core.security import verify_password
+from app.footballfantasyapi.models.user import User
+from app.footballfantasyapi.core.config import settings
+from app.footballfantasyapi.core.security import verify_password
 
 JWTPayloadMapping = MutableMapping[
     str, Union[datetime, bool, str, List[str], List[int]]

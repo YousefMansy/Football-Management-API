@@ -1,11 +1,11 @@
 from typing import Sequence, Union
 from sqlalchemy.orm import Session
 
-from footballfantasyapi.crud import player
-from footballfantasyapi.models.team import Team
-from footballfantasyapi.crud.base import CRUDBase
-from footballfantasyapi.schemas.player import Player
-from footballfantasyapi.schemas.team import TeamCreate, TeamUpdate, TeamUpdatePrivate
+from app.footballfantasyapi.crud import player
+from app.footballfantasyapi.models.team import Team
+from app.footballfantasyapi.crud.base import CRUDBase
+from app.footballfantasyapi.schemas.player import Player
+from app.footballfantasyapi.schemas.team import TeamCreate, TeamUpdate, TeamUpdatePrivate
 
 
 class CRUDTeam(CRUDBase[Team, TeamCreate, TeamUpdate]):

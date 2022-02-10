@@ -2,9 +2,9 @@ import random
 from sqlalchemy.orm import Session
 from fastapi import APIRouter, Depends, HTTPException
 
-from footballfantasyapi import crud
-from footballfantasyapi.api import deps
-from footballfantasyapi.schemas import Player, PlayerUpdate, User, PlayerTransfer, Profile
+from app.footballfantasyapi import crud
+from app.footballfantasyapi.api import deps
+from app.footballfantasyapi.schemas import Player, PlayerUpdate, User, PlayerTransfer, Profile
 
 router = APIRouter()
 

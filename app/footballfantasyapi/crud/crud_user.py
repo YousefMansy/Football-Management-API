@@ -1,11 +1,11 @@
 from sqlalchemy.orm import Session
 from typing import Any, Dict, Optional, Union
 
-from footballfantasyapi.crud import team, player
-from footballfantasyapi.models.user import User
-from footballfantasyapi.crud.base import CRUDBase
-from footballfantasyapi.core.security import get_password_hash
-from footballfantasyapi.schemas.user import UserCreate, UserUpdate, Profile
+from app.footballfantasyapi.crud import team, player
+from app.footballfantasyapi.models.user import User
+from app.footballfantasyapi.crud.base import CRUDBase
+from app.footballfantasyapi.core.security import get_password_hash
+from app.footballfantasyapi.schemas.user import UserCreate, UserUpdate, Profile
 
 
 class CRUDUser(CRUDBase[User, UserCreate, UserUpdate]):
